@@ -12,10 +12,10 @@ class Window:
         self.output = [[" " for _ in range(self.window_width+1)] for _ in range(self.window_height+1)]
         self.life_time = 0
 
-        self.lock_console_size()
-        self.disable_scroll()
-        self.disable_cursor()
-        self.time()
+        # self.lock_console_size()
+        # self.disable_scroll()
+        # self.disable_cursor()
+        # self.time()
 
     @staticmethod
     def lock_console_size():
@@ -156,7 +156,7 @@ class Window:
     #             self.draw_line(pos1, pos2, "█")
     #         os.system("cls" if os.name == "nt" else "clear")
 
-    def time(self, sleep_t=0.1):
+    def time(self, sleep_t=0.001):
         while True:
             sleep(sleep_t)
             self.life_time += sleep_t
